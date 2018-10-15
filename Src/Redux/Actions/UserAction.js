@@ -1,16 +1,28 @@
 import axios from 'axios'
 
+const data = [
+  {id:1,
+    name: 'aaa',
+    type: 'aa1'
+  },
+  {id:2,
+    name: 'bbb',
+    type: 'bb1'
+  },
+]
+
 export function fetchData() {
   return dispatch => {
     dispatch(fetchDataBegin());
-    axios({
-			method: 'GET',
-			url: 'http://pokeapi.salestock.net/api/v2/pokemon/',
-    })
-    .then(({data}) => {
-			dispatch(fetchDataSuccess(data))
-		})
-		.catch(error => dispatch(fetchdataFailure(error)))
+    dispatch(fetchDataSuccess(data))
+    // axios({
+		// 	method: 'GET',
+		// 	url: 'http://pokeapi.salestock.net/api/v2/pokemon/',
+    // })
+    // .then(({data}) => {
+		// 	dispatch(fetchDataSuccess(data))
+		// })
+		// .catch(error => console.log(error))
   };
 }
 
