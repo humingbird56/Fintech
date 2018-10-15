@@ -4,6 +4,8 @@ import {
   Text,
   View
 } from 'react-native';
+import { connect } from 'react-redux';
+import {fetchData} from '../../Redux/Actions/UserAction'
 
 class Home extends Component {
   constructor(props) {
@@ -12,7 +14,12 @@ class Home extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.fetchData()
+  }
+
   render() {
+    console.log('props', this.props)
     return (
       <View style={{padding: 10}}>
         <Text style={{padding: 10, fontSize: 42}}>
@@ -31,4 +38,20 @@ class Home extends Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+  return {
+    items: state.userReducer.items,
+    loading: state.userReducer.loading,
+    error: state.userReducer.error
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchData: () => dispatch(fetchData()),
+  }
+}
+
+const connectComponent = connect(mapStateToProps, mapDispatchToProps)(Home)
+
+export default connectComponent

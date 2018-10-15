@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   AppRegistry,
   Button,
@@ -12,7 +6,7 @@ import {
   Text,
   View
 } from 'react-native';
-import App from './Screen/android/App'
+import App from './Src/android/App'
 
 
 export default class MyFirstApp extends Component {
