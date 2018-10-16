@@ -23,7 +23,7 @@ class Home extends Component {
     return (
       <View style={{padding: 10}}>
         <Text style={{padding: 10, fontSize: 42}}>
-          Home
+          Homeaaa
         </Text>
         <Button
           title="Home"

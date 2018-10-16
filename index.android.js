@@ -9,7 +9,7 @@ import {
 import App from './Src/android/App'
 
 
-export default class MyFirstApp extends Component {
+export default class Fintech extends Component {
   render() {
     return (
       <App/>
@@ -18,4 +18,4 @@ export default class MyFirstApp extends Component {
 }
 
 
-AppRegistry.registerComponent('MyFirstApp', () => MyFirstApp);
+AppRegistry.registerComponent('Fintech', () => Fintech);

@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import Login from './Screen/ios/WelcomePage/Login'
 
-export default class MyFirstApp extends Component {
+export default class Fintech extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('MyFirstApp', () => MyFirstApp);
+AppRegistry.registerComponent('Fintech', () => Fintech);
